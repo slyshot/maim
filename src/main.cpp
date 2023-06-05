@@ -460,6 +460,7 @@ int app( int argc, char** argv ) {
         std::cout << "Run maim --help for more information." << std::endl;
         return 0;
     }
+    maimOptions->savepathGiven = ( maimOptions->savepathGiven && maimOptions->savepath != "-" );
 
     if ( maimOptions->select ) {
         if ( maimOptions->windowGiven || maimOptions->parentGiven || maimOptions->geometryGiven ) {
